@@ -1,0 +1,24 @@
+{
+  "name": "html-css-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass src/styles/main.scss dist/css/main.css --no-source-map && postcss dist/css/main.css --replace",
+    "watch:css": "sass --watch src/styles/main.scss dist/css/main.css && postcss --watch dist/css --replace"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.89.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "last 2 versions"
+  ]
+}

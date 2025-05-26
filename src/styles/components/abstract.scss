@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "sass:list";
+@use 'sass:math';
+
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+@mixin media($breakpoint, $direction: "max") {
+  @media only screen and (#{$direction}-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin mediaMin($breakpoint, $direction: "min") {
+  @media only screen and (#{$direction}-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@function px-to-rem($px, $base-font-size: 16, $precision: 2) {
+  $rem-value: math.div($px, $base-font-size);
+  $rounded:  math.div(math.round($rem-value * math.pow(10, $precision)), math.pow(10, $precision)) or calc(math.round($rem-value * math.pow(10, $precision)) / math.pow(10, $precision));
+  @return #{$rounded}rem;
+}
