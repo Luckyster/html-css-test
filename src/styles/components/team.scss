@@ -25,6 +25,7 @@
   &__desc {
     @include media(md) {
       margin: 0 5px 0 0;
+      line-height: 1.47;
     }
   }
   &__inner {

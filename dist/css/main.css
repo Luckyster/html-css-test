@@ -82,6 +82,7 @@ h2 {
 @media only screen and (max-width: 768px) {
   .team__desc {
     margin: 0 5px 0 0;
+    line-height: 1.47;
   }
 }
 .team__inner {
