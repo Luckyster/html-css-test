@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:css": "sass src/styles/main.scss dist/css/main.css --no-source-map && postcss dist/css/main.css --replace",
+    "build:css": "sass src/styles/main.scss dist/css/main.css && postcss dist/css/main.css --replace",
     "watch:css": "sass --watch src/styles/main.scss dist/css/main.css && postcss --watch dist/css --replace"
   },
   "keywords": [],
